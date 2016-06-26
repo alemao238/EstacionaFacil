@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_map"
         android:layout_above="@+id/toolbar_bottom"
@@ -51,7 +52,7 @@
                 android:src="@drawable/places_ic_search"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>/>
+                android:layout_weight="1"/>
 
             <ImageView
                 android:id="@+id/manage"
@@ -59,7 +60,8 @@
                 android:src="@drawable/ic_card_travel_white_18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>/>
+                android:layout_weight="1"/>
+
 
 
         </LinearLayout>

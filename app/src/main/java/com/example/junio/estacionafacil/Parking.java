@@ -2,15 +2,18 @@ package com.example.junio.estacionafacil;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.util.Comparator;
+
 /**
  * Created by junio on 22/06/16.
  */
-public class Parking {
+public class Parking implements Comparable<Parking>{
     private Long id;
     private String name;
     private String address;
     private int vacancies;
     private LatLng latLng;
+    private double distancia;
 
 
     public Parking(Long id,String nome,String address,int vacancies,LatLng latLng){
@@ -58,5 +61,24 @@ public class Parking {
 
     public void setLatLng(LatLng latLng) {
         this.latLng = latLng;
+    }
+
+    public double getDistancia() {
+        return distancia;
+    }
+
+    public void setDistancia(double distancia) {
+        this.distancia = distancia;
+    }
+
+    @Override
+    public int compareTo(Parking another) {
+        if(this.getDistancia() < another.getDistancia()){
+            return -1;
+        }
+        if (this.getDistancia() > another.getDistancia()){
+            return  1;
+        }
+        return 0;
     }
 }

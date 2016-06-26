@@ -18,17 +18,18 @@ import java.util.List;
 public class ParkingAdapter extends RecyclerView.Adapter<ParkingViewHolder> {
     private LayoutInflater inflater;
     private List<Parking> mList;
-
+    private Context c;
     public ParkingAdapter(Context c,List<Parking> l){
         inflater=LayoutInflater.from(c);
         mList=l;
+        this.c=c;
 
     }
 
     @Override
     public ParkingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v=inflater.inflate(R.layout.parking_item_recycler,parent,false);
-        ParkingViewHolder pvh=new ParkingViewHolder(v);
+        ParkingViewHolder pvh=new ParkingViewHolder(v,c);
 
 
         return pvh;
